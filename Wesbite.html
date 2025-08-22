@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QuickReport | Psychoeducational Report Writing Service</title>
+  <meta name="description" content="Done-for-you psychoeducational report writing for clinics and practitioners. Reduce writing time, keep your voice, and deliver polished reports faster." />
+  <meta name="theme-color" content="#0e5bd3" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="QuickReport — Report Writing for Psychologists">
+  <meta property="og:description" content="Cut report writing time while keeping your clinical voice. Inquire today.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=QuickReport">
+  <meta property="og:url" content="https://your-domain.com">
+
+  <style>
+    :root{
+      --bg: #fff;
+      --text: #0e1420;
+      --muted: #606b85;
+      --brand: #0e5bd3;
+      --brand-2:#0aa0e6;
+      --card: #f6f8fb;
+      --border: #e6eaf2;
+      --ring: rgba(14,91,211,.25);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0c111b; --text:#eef2ff; --muted:#a3acc2;
+        --card:#121828; --border:#242c3d; --ring:rgba(74,144,255,.35);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text); background:var(--bg);
+      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10; background:rgba(255,255,255,.7);
+      backdrop-filter:saturate(180%) blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+    @media (prefers-color-scheme: dark){ header{background:rgba(12,17,27,.6)} }
+
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .logo{
+      width:32px; height:32px; border-radius:8px;
+      background: linear-gradient(135deg,var(--brand),var(--brand-2));
+      display:inline-grid; place-items:center; color:white; font-weight:800;
+    }
+    .nav a.btn{padding:10px 14px; border:1px solid var(--border); border-radius:10px; font-weight:600}
+    .nav a.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border:none}
+    .nav a.btn:hover{transform:translateY(-1px); transition:transform .15s ease}
+
+    .hero{padding:64px 0 36px}
+    .hero-grid{display:grid; gap:28px; align-items:center}
+    @media (min-width:860px){ .hero-grid{grid-template-columns:1.1fr .9fr} }
+    .eyebrow{display:inline-block; padding:6px 10px; border-radius:999px; background:var(--card); border:1px solid var(--border); color:var(--muted); font-size:13px; margin-bottom:12px}
+    h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:0 0 10px}
+    .sub{color:var(--muted); font-size:clamp(16px,2vw,18px)}
+    .hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .badge{
+      display:flex; gap:8px; align-items:center; color:var(--muted); font-size:14px; margin-top:10px
+    }
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px
+    }
+    .mock{
+      aspect-ratio: 16 / 10; border-radius:12px; background:
+        radial-gradient(80% 120% at 0% 0%, rgba(14,91,211,.12), transparent 50%),
+        linear-gradient(180deg, rgba(10,160,230,.08), transparent),
+        var(--bg);
+      border:1px dashed var(--border);
+      display:grid; place-items:center; color:var(--muted); font-weight:600
+    }
+
+    .section{padding:56px 0}
+    .section h2{font-size:28px; margin:0 0 10px}
+    .section p.lead{color:var(--muted); margin:0 0 24px}
+    .grid{display:grid; gap:18px}
+    @media (min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+
+    .feature{background:var(--card); border:1px solid var(--border); padding:18px; border-radius:14px}
+    .feature h3{margin:8px 0 6px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+    .icon{
+      width:36px; height:36px; border-radius:8px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:white
+    }
+
+    .steps .step{display:flex; gap:14px; align-items:flex-start}
+    .steps .num{min-width:28px; height:28px; border-radius:999px; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:700}
+
+    .pricing{display:grid; gap:18px}
+    @media (min-width:760px){ .pricing{grid-template-columns:repeat(3,1fr)} }
+    .plan{border:1px solid var(--border); border-radius:14px; padding:20px; background:var(--bg)}
+    .plan h3{margin:0 0 4px}
+    .price{font-size:28px; font-weight:800}
+    .plan ul{margin:12px 0 0; padding:0 0 0 18px; color:var(--muted)}
+    .plan .cta{margin-top:14px; display:block}
+
+    form{display:grid; gap:12px}
+    input, textarea, select{
+      width:100%; padding:12px 12px; border:1px solid var(--border); border-radius:10px; background:var(--bg); color:var(--text);
+      outline:none; transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    input:focus, textarea:focus, select:focus{ box-shadow: 0 0 0 6px var(--ring); border-color:var(--brand)}
+    .row{display:grid; gap:12px}
+    @media (min-width:640px){ .row{grid-template-columns:1fr 1fr} }
+    .btn{
+      display:inline-block; padding:12px 16px; border-radius:10px; font-weight:700; text-align:center;
+      border:1px solid var(--border); background:var(--bg); color:var(--text);
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border:none}
+    .footnote{font-size:13px; color:var(--muted)}
+    footer{padding:28px 0; border-top:1px solid var(--border); color:var(--muted)}
+    .hide{position:absolute !important; left:-9999px !important}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+    body {
+      transform: scale(1.1);
+      transform-origin: top left;
+      width: 90.9%; /* 100% / 1.1 */}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">Q</div>
+        QuickReport
+      </div>
+      <div>
+        <a href="#inquire" class="btn primary">Inquire</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">For Psychologists & Clinics</span>
+          <h1>Psychoeducational reports—polished, accurate, on time.</h1>
+          <p class="sub">We turn your assessment results and notes into clear, client-ready reports, so you can spend less time writing and more time with patients.</p>
+          <div class="hero-cta">
+            <a href="#inquire" class="btn primary">Get a Quote</a>
+            <a href="#how" class="btn">How it works</a>
+          </div>
+          <div class="badge" aria-label="Value props">
+            <!-- tiny inline icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m9 16.17l-3.88-3.88L4 13.41L9 18.41L20.59 6.83L19.17 5.41z"/></svg>
+            Avg. 5–20 hours saved per week
+          </div>
+        </div>
+        <div class="card">
+          <div class="mock">
+            <img src="gifgit.gif" alt="Demo of how the website functions" style="max-width:100%; border-radius:8px;" />
+          </div>
+          <div class="footnote" style="margin-top:10px;">We match your voice & clinic style guide.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why clinics choose QuickReport</h2>
+        <p class="lead">Quality that reads like you wrote it—delivered fast and consistently.</p>
+        <div class="grid cols-3">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18v2H3zm0 6h18v2H3zm0 6h12v2H3z"/></svg>
+            </div>
+            <h3>Clinically clear</h3>
+            <p>Simple and clear usage that requires virtually no training.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5l10-5zm0 7.2L5 6.5V11l7 3.7l7-3.7V6.5zM5 13.98V18l7 4l7-4v-4.02l-7 3.7z"/></svg>
+            </div>
+            <h3>Your voice, standardized</h3>
+            <p>We populate your reports based on your templates, just how you like it.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+            </div>
+            <h3>Secure & compliant</h3>
+            <p>Encrypted transfer; PHI handling procedures. BAA available on request.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="grid cols-3 steps">
+          <div class="step feature">
+            <div class="num" aria-hidden="true">1</div>
+            <div>
+              <h3>Share materials</h3>
+              <p>Upload score documents or input hand scored items.</p>
+            </div>
+          </div>
+          <div class="step feature">
+            <div class="num" aria-hidden="true">2</div>
+            <div>
+              <h3>Generate draft</h3>
+              <p>We produce a correctly populated draft of your scores.</p>
+            </div>
+          </div>
+          <div class="step feature">
+            <div class="num" aria-hidden="true">3</div>
+            <div>
+              <h3>Review & finalize</h3>
+              <p>Download your document and include your own recommendations and diganoses.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <p class="lead">Transparent rates with volume discounts for clinics.</p>
+        <div class="pricing">
+          <div class="plan">
+            <h3>Essentials</h3>
+            <div class="price">$450 / month</div>
+            <ul>
+              <li>Inlcudes the addition of clinic and one template</li>
+              <li>+$150 per practiitoner template</li>
+            </ul>
+            <a href="#inquire" class="btn cta">Inquire</a>
+          </div>
+          <div class="plan" style="border-color:transparent; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff">
+            <h3 style="margin:0 0 4px">Complete</h3>
+            <div class="price" style="color:#fff">$1100 / month</div>
+            <ul style="color:#eef2ff">
+              <li>Unlimited templates for all clinicians at your institution</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#inquire" class="btn cta" style="background:#fff; color:#0e1420; border:none">Inquire</a>
+          </div>
+          <div class="plan">
+            <h3>Clinic Plan</h3>
+            <div class="price">Custom</div>
+            <ul>
+              <li>Monthly volume</li>
+              <li>Shared templates</li>
+              <li>Dedicated editor</li>
+            </ul>
+            <a href="#inquire" class="btn cta">Inquire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inquire" aria-labelledby="inquire-title">
+      <div class="container">
+        <h2 id="inquire-title">Inquire</h2>
+        <p class="lead">Tell us about your clinic and typical caseload. We’ll respond within one business day.</p>
+        <div class="grid cols-2">
+          <div class="card">
+            <!-- Replace the action with your Formspree endpoint or back-end endpoint -->
+            <form id="contact-form" action="https://formspree.io/f/yourcode" method="POST" novalidate>
+              <div class="row">
+                <div>
+                  <label for="name" class="sr-only">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Full name" autocomplete="name" required>
+                </div>
+                <div>
+                  <label for="email" class="sr-only">Email</label>
+                  <input id="email" name="email" type="email" placeholder="Work email" autocomplete="email" required>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="clinic" class="sr-only">Clinic / Organization</label>
+                  <input id="clinic" name="clinic" type="text" placeholder="Clinic / Organization">
+                </div>
+                <div>
+                  <label for="interest" class="sr-only">Interest</label>
+                  <select id="interest" name="interest" aria-label="Service interest">
+                    <option value="" selected>Service interest</option>
+                    <option>Single reports</option>
+                    <option>Ongoing support</option>
+                    <option>Clinic volume plan</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Briefly describe your needs and typical assessments…" required></textarea>
+              </div>
+
+              <!-- Honeypot field for spam bots -->
+              <input type="text" name="_gotcha" class="hide" tabindex="-1" autocomplete="off">
+
+              <button class="btn primary" type="submit">Send inquiry</button>
+              <p class="footnote" id="form-status" role="status" aria-live="polite"></p>
+              <input type="hidden" name="source" value="website-landing" />
+            </form>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">What to include</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted)">
+              <li>Typical batteries (e.g., WISC/WAIS, WIAT, BASC, CBRS)</li>
+              <li>Clinic templates or preferences</li>
+              <li>Turnaround expectations</li>
+              <li>Sample de-identified text (optional)</li>
+            </ul>
+            <div style="margin-top:16px" class="footnote">
+              We never ask for PHI at this step. If we work together, you’ll receive a secure upload link with encryption in transit and at rest.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+      <div>© <span id="y"></span> QuickReport. All rights reserved.</div>
+      <div>
+        <a href="#inquire">Contact</a> ·
+        <a href="#" onclick="alert('We’ll add a simple privacy page here.'); return false;">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightweight JS: validation + Formspree handling -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending…';
+
+      // Basic client-side validation
+      const email = form.email.value.trim();
+      const name = form.name.value.trim();
+      const message = form.message.value.trim();
+      if(!email || !name || !message){
+        statusEl.textContent = 'Please fill in the required fields.';
+        return;
+      }
+
+      try{
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
+        if(res.ok){
+          form.reset();
+          statusEl.textContent = 'Thanks! We’ll be in touch within one business day.';
+        }else{
+          statusEl.textContent = 'Something went wrong. Please try again or email us.';
+        }
+      }catch(err){
+        statusEl.textContent = 'Network error. Please try again shortly.';
+      }
+    });
+  </script>
+
+  <!-- Optional structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "QuickReport",
+    "url": "https://your-domain.com",
+    "description": "Psychoeducational report writing service for psychologists and clinics.",
+    "areaServed": "CA",
+    "email": "hello@your-domain.com",
+    "sameAs": [],
+    "serviceType": "Report writing for psychoeducational assessments"
+  }
+  </script>
+</body>
+</html>
