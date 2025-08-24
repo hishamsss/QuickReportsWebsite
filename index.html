@@ -271,43 +271,33 @@
         <div class="grid cols-2">
           <div class="card">
             <!-- Replace the action with your Formspree endpoint or back-end endpoint -->
-            <form id="contact-form" action="https://formspree.io/f/xvgbppjn" method="POST" novalidate>
-              <div class="row">
-                <div>
-                  <label for="name" class="sr-only">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Full name" autocomplete="name" required>
-                </div>
-                <div>
-                  <label for="email" class="sr-only">Email</label>
-                  <input id="email" name="email" type="email" placeholder="Work email" autocomplete="email" required>
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  <label for="clinic" class="sr-only">Clinic / Organization</label>
-                  <input id="clinic" name="clinic" type="text" placeholder="Clinic / Organization">
-                </div>
-                <div>
-                  <label for="interest" class="sr-only">Interest</label>
-                  <select id="interest" name="interest" aria-label="Service interest">
-                    <option value="" selected>Service interest</option>
-                    <option>Single reports</option>
-                    <option>Ongoing support</option>
-                    <option>Clinic volume plan</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label for="message" class="sr-only">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Briefly describe your needs and typical assessments…" required></textarea>
-              </div>
-
-              <!-- Honeypot field for spam bots -->
+              <form id="contact-form"
+                  action="https://formspree.io/f/xvgbppjn"  <!-- ← replace with your endpoint -->
+                  method="POST"
+                  accept-charset="UTF-8">
+              <!-- REQUIRED fields -->
+              <input type="text"   name="name"    id="name"    placeholder="Full name" required>
+              <input type="email"  name="email"   id="email"   placeholder="Work email" required>
+              <input type="text"   name="clinic"  id="clinic"  placeholder="Clinic / Organization">
+              <select name="interest" id="interest">
+                <option value="" selected>Service interest</option>
+                <option>Single reports</option>
+                <option>Ongoing support</option>
+                <option>Clinic volume plan</option>
+              </select>
+              <textarea name="message" id="message" rows="5" placeholder="Briefly describe your needs…" required></textarea>
+            
+              <!-- Nice-to-have hidden fields -->
+              <input type="hidden" name="_subject"  value="New QuickReport Inquiry">
+              <input type="hidden" name="_language" value="en">
+              <!-- Redirect after success (optional): -->
+              <!-- <input type="hidden" name="_redirect" value="https://quickreports.ca/thanks.html"> -->
+            
+              <!-- Spam honeypot (keep hidden in your CSS) -->
               <input type="text" name="_gotcha" class="hide" tabindex="-1" autocomplete="off">
-
-              <button class="btn primary" type="submit">Send inquiry</button>
+            
+              <button type="submit" class="btn primary">Send inquiry</button>
               <p class="footnote" id="form-status" role="status" aria-live="polite"></p>
-              <input type="hidden" name="source" value="website-landing" />
             </form>
           </div>
           <div class="card">
@@ -388,5 +378,6 @@
   </script>
 </body>
 </html>
+
 
 
